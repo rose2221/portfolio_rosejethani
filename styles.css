@@ -1,453 +1,768 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Slab&display=swap');
-{
-    margin: 0;
-    padding-0;
-}
+                                                                            @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+                                                                            @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Slab&display=swap');
+                                                                            * {
+                                                                                margin: 0;
+                                                                                padding: 0;
+                                                                                overflow-x: hidden;
+                                                                            }
+                                                                            
+                                                                            html {
+                                                                                scroll-behaviour: smooth;
+                                                                            }
+                                                                            
+                                                                            .logo {
+                                                                                height: 70px;
+                                                                            }
+                                                                            
+                                                                            #header {
+                                                                                background: #080808;
+                                                                                color: #fff;
+                                                                                padding: 10px 10%;
+                                                                            }
+                                                                            
+                                                                            nav {
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                justify-content: space-between;
+                                                                                flex-wrap: wrap;
+                                                                            }
+                                                                            
+                                                                            .main {
+                                                                                /* background-color: yellow; */
+                                                                                background: #080808;
+                                                                                color: #fff;
+                                                                                width: 100vw;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .infoContainer {
+                                                                                height: 90vh;
+                                                                                width: 100vw;
+                                                                                margin: 70px 60px auto;
+                                                                                display: flex;
+                                                                                justify-content: space-around;
+                                                                                background: #080808;
+                                                                                color: #fff;
+                                                                                flex-wrap: wrap;
+                                                                                flex-direction: row;
+                                                                            }
+                                                                            
+                                                                            .devinfo {
+                                                                                left: 5vw;
+                                                                                position: absolute;
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                                flex-direction: column;
+                                                                                height: 86vh;
+                                                                                z-index: 1;
+                                                                            }
+                                                                            
+                                                                            .devpic {
+                                                                                right: 0;
+                                                                                position: absolute;
+                                                                                /* width: 289px; */
+                                                                                height: 550px;
+                                                                                flex: 1;
+                                                                                order: 2;
+                                                                                /* z-index: -1; */
+                                                                            }
+                                                                            
+                                                                            .devpic img {
+                                                                                margin-right: -64px;
+                                                                                z-index: -1;
+                                                                            }
+                                                                            
+                                                                            .hello {
+                                                                                font-size: 70px;
+                                                                            }
+                                                                            
+                                                                            .name {
+                                                                                font-size: 60px;
+                                                                                font-weight: 1000;
+                                                                                color: #ff004f;
+                                                                            }
+                                                                            
+                                                                            .about {
+                                                                                font-size: 40px
+                                                                            }
+                                                                            
+                                                                            nav ul li {
+                                                                                display: inline-block;
+                                                                                list-style: none;
+                                                                                margin: 10px 20px;
+                                                                            }
+                                                                            
+                                                                            nav ul li a {
+                                                                                color: #fff;
+                                                                                text-decoration: none;
+                                                                                font-size: 18px;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                                position: relative;
+                                                                            }
+                                                                            
+                                                                            nav ul li a::after {
+                                                                                content: '';
+                                                                                width: 0;
+                                                                                height: 3px;
+                                                                                background: #ff004f;
+                                                                                position: absolute;
+                                                                                left: 0;
+                                                                                bottom: 0px;
+                                                                                transition: 0.5s;
+                                                                            }
+                                                                            
+                                                                            nav ul li a:hover::after {
+                                                                                width: 100%
+                                                                            }
+                                                                            
+                                                                            #about {
+                                                                                padding: 80px 0;
+                                                                                color: #ababab;
+                                                                            }
+                                                                            
+                                                                            .row {
+                                                                                display: flex;
+                                                                                justify-content: space-between;
+                                                                                flex-wrap: wrap;
+                                                                            }
+                                                                            
+                                                                            .about-col-1 {
+                                                                                flex-basis: 50%;
+                                                                                margin-left: 2vw;
+                                                                            }
+                                                                            
+                                                                            .about-col-1 img {
+                                                                                width: 100%;
+                                                                                border-radius: 15px;
+                                                                            }
+                                                                            
+                                                                            .about-col-2 {
+                                                                                flex-basis: 40%;
+                                                                            }
+                                                                            
+                                                                            .sub-title {
+                                                                                font-size: 60px;
+                                                                                font-weight: 600;
+                                                                                color: #fff;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .subcontent {
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .mewhen {
+                                                                                height: 450px;
+                                                                            }
+                                                                            
+                                                                            .tab-title {
+                                                                                display: flex;
+                                                                                margin: 20px 0 40px;
+                                                                            }
+                                                                            
+                                                                            .tab-links {
+                                                                                margin-right: 50px;
+                                                                                font-size: 18px;
+                                                                                font-weight: 500;
+                                                                                cursor: pointer;
+                                                                                position: relative;
+                                                                                overflow-y: hidden;
+                                                                            }
+                                                                            
+                                                                            .tab-links::after {
+                                                                                content: '';
+                                                                                width: 0;
+                                                                                height: 3px;
+                                                                                background: #ff004f;
+                                                                                position: absolute;
+                                                                                left: 0;
+                                                                                bottom: 0px;
+                                                                                transition: 0, 5s;
+                                                                            }
+                                                                            
+                                                                            .tab-links.active-link::after {
+                                                                                width: 50%;
+                                                                            }
+                                                                            
+                                                                            .tab-contents ul li {
+                                                                                list-style: none;
+                                                                                margin: 10px 0;
+                                                                                /* overflow-y: hidden; */
+                                                                            }
+                                                                            
+                                                                            .tab-contents ul li span {
+                                                                                color: #b54769;
+                                                                                font-size: 14px;
+                                                                                /* overflow-y: hidden; */
+                                                                            }
+                                                                            
+                                                                            .tab-contents {
+                                                                                display: none;
+                                                                                /* overflow-y: hidden; */
+                                                                            }
+                                                                            
+                                                                            .tab-contents.active-tab {
+                                                                                /* overflow-y: hidden; */
+                                                                                display: block;
+                                                                            }
+                                                                            
+                                                                            #Projects {
+                                                                                padding: 30px 0;
+                                                                            }
+                                                                            
+                                                                            .projects-list {
+                                                                                display: grid;
+                                                                                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                                                                                grid-gap: 40px;
+                                                                                margin-top: 50px;
+                                                                            }
+                                                                            
+                                                                            .projects-list div {
+                                                                                background: #262626;
+                                                                                padding: 40px;
+                                                                                font-size: 13px;
+                                                                                font-weight: 300;
+                                                                                border-radius: 10px;
+                                                                                transition: transform 0.5s;
+                                                                            }
+                                                                            
+                                                                            .projects-list div i {
+                                                                                font-size: 50px;
+                                                                                margin-bottom: 30px;
+                                                                            }
+                                                                            
+                                                                            .projects-list div h2 {
+                                                                                font-size: 30px;
+                                                                                font-weight: 500;
+                                                                                margin-bottom: 15px;
+                                                                            }
+                                                                            
+                                                                            .projects-list div a {
+                                                                                text-decoration: none;
+                                                                                color: #fff;
+                                                                                font-size: 12px;
+                                                                                margin-top: 20px;
+                                                                                display: inline-block;
+                                                                            }
+                                                                            
+                                                                            .projects-list div:hover {
+                                                                                background: #ff004f;
+                                                                                transform: translateY(-10px);
+                                                                            }
+                                                                            
+                                                                            .portfolio {
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                                padding: 50px 0;
+                                                                            }
+                                                                            
+                                                                            .work-list {
+                                                                                display: grid;
+                                                                                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                                                                                grid-gap: 40px;
+                                                                                margin-top: 50px;
+                                                                            }
+                                                                            
+                                                                            .work {
+                                                                                border-radius: 10px;
+                                                                                position: relative;
+                                                                                overflow: hidden;
+                                                                            }
+                                                                            
+                                                                            .work img {
+                                                                                width: 100%;
+                                                                                /* Specify the width value with units */
+                                                                                border-radius: 10px;
+                                                                                display: block;
+                                                                                transition: transform 0.5s;
+                                                                            }
+                                                                            
+                                                                            .layer {
+                                                                                width: 100%;
+                                                                                height: 0;
+                                                                                background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+                                                                                border-radius: 10px;
+                                                                                position: absolute;
+                                                                                left: 0;
+                                                                                bottom: 0;
+                                                                                overflow: hidden;
+                                                                                display: flex;
+                                                                                align-items: center;
+                                                                                justify-content: center;
+                                                                                flex-direction: column;
+                                                                                padding: 0 10%;
+                                                                                text-align: left;
+                                                                                box-sizing: border-box;
+                                                                                font-size: 14px;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .layer h3 {
+                                                                                font-weight: 500;
+                                                                                margin-bottom: 20px;
+                                                                                width: 100%;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .layer p {
+                                                                                align-items: center;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .layer a {
+                                                                                margin-top: 20px;
+                                                                                color: #ff004f;
+                                                                                text-decoration: none;
+                                                                                font-size: 18px;
+                                                                                line-height: 60px;
+                                                                                background: #fff;
+                                                                                width: 60px;
+                                                                                height: 60px;
+                                                                                border-radius: 50%;
+                                                                                text-align: center;
+                                                                                transition: 0.5s;
+                                                                            }
+                                                                            
+                                                                            .work:hover img {
+                                                                                transform: scale(1, 1);
+                                                                            }
+                                                                            
+                                                                            .work:hover .layer {
+                                                                                height: 100%;
+                                                                            }
+                                                                            
+                                                                            .btn {
+                                                                                display: block;
+                                                                                margin: 50px auto;
+                                                                                width: fit-content;
+                                                                                border: 1px solid #ff004f;
+                                                                                padding: 14px 50px;
+                                                                                border-radius: 6px;
+                                                                                text-decoration: none;
+                                                                                width: 91px;
+                                                                                color: #fff;
+                                                                                transition: background 0.5s;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .btn1:hover {
+                                                                                background: #ff004f;
+                                                                            }
+                                                                            
+                                                                            .btn1 {
+                                                                                visibility: hidden;
+                                                                                display: flex;
+                                                                                margin: 50px auto;
+                                                                                width: fit-content;
+                                                                                border: 1px solid #ff004f;
+                                                                                padding: 14px 50px;
+                                                                                border-radius: 6px;
+                                                                                text-decoration: none;
+                                                                                width: 91px;
+                                                                                color: #fff;
+                                                                                transition: background 0.5s;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                                align-self: center;
+                                                                            }
+                                                                            
+                                                                            .btn:hover {
+                                                                                background: #ff004f;
+                                                                            }
+                                                                            
+                                                                            .contact-left {
+                                                                                flex-basis: 35%;
+                                                                            }
+                                                                            
+                                                                            .contact-right {
+                                                                                flex-basis: 65%;
+                                                                            }
+                                                                            
+                                                                            .contact-left p {
+                                                                                margin-top: 30px;
+                                                                                display: flex;
+                                                                            }
+                                                                            
+                                                                            .contact-left p i {
+                                                                                color: #ff004f;
+                                                                                font-size: 25px;
+                                                                            }
+                                                                            
+                                                                            .social-icons {
+                                                                                margin-top: 30px;
+                                                                            }
+                                                                            
+                                                                            .social-icons a {
+                                                                                text-decoration: none;
+                                                                                font-size: 30px;
+                                                                                margin-right: 15px;
+                                                                                color: #ababab;
+                                                                                display: inline-block;
+                                                                            }
+                                                                            
+                                                                            .social-icons a:hover {
+                                                                                color: #ff004f;
+                                                                                transform: translateY(-5px);
+                                                                            }
+                                                                            
+                                                                            .contact-right {
+                                                                                overflow: hidden;
+                                                                                margin-top: 95px;
+                                                                            }
+                                                                            
+                                                                            .contact-right form {
+                                                                                width: 100%;
+                                                                                padding-left: 1px;
+                                                                                padding-top: 36px;
+                                                                            }
+                                                                            
+                                                                            .btn.btn2 {
+                                                                                display: block;
+                                                                                background: #ff004f;
+                                                                                font-size: small;
+                                                                                margin-left: 1px;
+                                                                                margin-top: 12px;
+                                                                                padding: 17px 16px;
+                                                                                width: 106px;
+                                                                                /* display: in-line; */
+                                                                                background-color: #ff004f;
+                                                                                cursor: pointer;
+                                                                                position: static;
+                                                                            }
+                                                                            
+                                                                            form input,
+                                                                            form textarea {
+                                                                                width: 100%;
+                                                                                border: 0;
+                                                                                outline: none;
+                                                                                background: #262626;
+                                                                                padding: 20px;
+                                                                                margin: 15px 0;
+                                                                                color: #fff;
+                                                                                font-size: 18px;
+                                                                                border-radius: 6px;
+                                                                                font-family: 'Libre Baskerville', serif;
+                                                                            }
+                                                                            
+                                                                            .copyright {
+                                                                                width: 100%;
+                                                                                text-align: center;
+                                                                                padding: 10px 0;
+                                                                                font-weight: 300;
+                                                                                margin-top: 20px;
+                                                                                background: #262626;
+                                                                            }
+                                                                            /* @media only stream and (max-width: 600px){
 
-
-/* 
-
-/* .sidebar {
-    background-color: red;
-    width: 20vw;
-    height: 100vh;
-    font-family: 'Libre Baskerville', serif;
-    /* font-family: 'Roboto Slab', serif; */
-
-
-/* } */
-
-html {
-    scroll-behaviour: smooth;
-}
-
-.logo {
-    /* height: 70px; */
-    height: 70px
-    /* width: 40px; */
-}
-
-#header {
-    background: #080808;
-    color: #fff;
-    padding: 10px 10%;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.main {
-    /* background-color: yellow; */
-    background: #080808;
-    color: #fff;
-    width: 100vw;
-    font-family: 'Libre Baskerville', serif;
-}
-
-
-/* .container {
-    display: flex;
-    background: #080808;
-    color: #fff;
 } */
-
-.infoContainer {
-    /* background-color: green; */
-    height: 90vh;
-    width: 100vw;
-    margin: 70px 60px auto;
-    display: flex;
-    justify-content: space-around;
-    background: #080808;
-    color: #fff;
-}
-
-.devinfo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.devpic {
-    /* width: 289px; */
-    height: 550px;
-}
-
-.hello {
-    font-size: 70px;
-}
-
-.name {
-    font-size: 60px;
-    font-weight: 1000;
-    color: #ff004f;
-}
-
-.about {
-    font-size: 40px
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: 'Libre Baskerville', serif;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-    width: 100%
-}
-
-#about {
-    padding: 80px 0;
-    color: #ababab;
-}
-
-.row {
-    display: flex;
-    justify-content: soace-between;
-    flex-wrap: wrap;
-}
-
-.about-col-1 {
-    flex-basis: 50%;
-}
-
-.about-col-1 img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.about-col-2 {
-    flex-basis: 40%;
-}
-
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.subcontent {
-    font-family: 'Libre Baskerville', serif;
-}
-
-.mewhen {
-    height: 450px;
-}
-
-.tab-title {
-    display: flex;
-    margin: 20px 0 40px;
-}
-
-.tab-links {
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-}
-
-.tab-links::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0, 5s;
-}
-
-.tab-links.active-link::after {
-    width: 50%;
-}
-
-.tab-contents ul li {
-    list style: none;
-    margin: 10px 0;
-}
-
-.tab-contents ul li span {
-    color: #b54769;
-    font-size: 14px;
-}
-
-.tab-contents {
-    display: none;
-}
-
-.tab-contents.active-tab {
-    display: block;
-}
-
-#Projects {
-    padding: 30px 0;
-}
-
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.projects-list div {
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-}
-
-.projects-list div i {
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.projects-list div h2 {
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.projects-list div a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.projects-list div:hover {
-    background: #ff004f;
-    transform: translateY(-10px);
-}
-
-.portfolio {
-    font-family: 'Libre Baskerville', serif;
-    padding: 50px 0;
-}
-
-
-/* .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-} */
-
-.work-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* 
-.work img {
-    width: 1005;
-    border-radius: 10px;
-    display: block;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-} */
-
-.work img {
-    width: 100%;
-    /* Specify the width value with units */
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.layer {
-    width: 81%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.layer h3 {
-    font-weight: 500;
-    margin-bottom: 20px;
-    width: 100%;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.layer p {
-    align-items: center;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.layer a {
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    transition: 0.5s;
-}
-
-.work:hover img {
-    transform: scale(1, 1);
-}
-
-.work:hover .layer {
-    height: 100%;
-}
-
-.btn {
-    display: block;
-    margin: 50px auto;
-    width: fit content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    width: 91px;
-    color: #fff;
-    transition: background 0.5s;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.btn:hover {
-    background: #ff004f;
-}
-
-.contact-left {
-    flex-basis: 35%;
-}
-
-.contact-right {
-    flex-basis: 35%;
-}
-
-.contact-left p {
-    margin-top: 30px;
-}
-
-.contact-left p i {
-    color: #ff004f;
-    font-size: 25px;
-    font size: 25px;
-}
-
-.social-icons {
-    margin-top: 30px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-}
-
-.social-icons a:hover {
-    color: #ff004f;
-    transform: traslateY(-5px);
-}
-
-.contact-right form {
-    width: 100%;
-    padding-left: 100px;
-    padding-top: 36px;
-}
-
-.btn.btn2 {
-    display: inline-block;
-    background: #ff004f;
-    font-size: small;
-    margin-left: 0px;
-    padding: 17px 16px;
-    width: 106px;
-    display: in-line;
-    background-color: #ff004f;
-    cursor: pointer;
-    position: static;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 20px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-
-.copyright {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-
-/* @media only stream and (max-width: 600px){
-
-} */
-
-#msg {
-    color: #61b752;
-    margin-top: -10px;
-    display: block;
-}
+                                                                            
+                                                                            #msg {
+                                                                                color: #61b752;
+                                                                                margin-top: -40px;
+                                                                                display: block;
+                                                                            }
+                                                                            
+                                                                            .svg-inline--fa {
+                                                                                display: none;
+                                                                            }
+                                                                            
+                                                                            .fa-paper-plane {
+                                                                                display: inline-block;
+                                                                                /* or use 'inline' depending on your preference */
+                                                                                margin-right: 5px;
+                                                                            }
+                                                                            
+                                                                            .fa-paper-plane {
+                                                                                color: #ff004f;
+                                                                            }
+                                                                            
+                                                                            .fa-linkedin {
+                                                                                display: inline;
+                                                                            }
+                                                                            
+                                                                            .fa-twitter {
+                                                                                display: inline;
+                                                                            }
+                                                                            
+                                                                            .sub-title {
+                                                                                margin-top: 15vh;
+                                                                            }
+                                                                            
+                                                                            form input,
+                                                                            form textarea {
+                                                                                width: 50vw;
+                                                                            }
+                                                                            
+                                                                            .work .svg-inline--fa {
+                                                                                display: inline-block;
+                                                                            }
+                                                                            /* .svg-inline--fa */
+                                                                            
+                                                                            @media only screen and (max-width: 600px) {
+                                                                                /* .layer {
+        font-size: 6px;
+        margin-right: 120px;
+        flex-basis: 100%;
+        width: 25%;
+    } */
+                                                                                /* .work {
+        display: flex;
+        /* overflow-x: visible; */
+                                                                                .tab-links {
+                                                                                    margin-right: 50px;
+                                                                                    font-size: 13px;
+                                                                                }
+                                                                                /* .devpic {
+            width: 289px;
+            height: 482px;
+        } */
+                                                                                .btn1 {
+                                                                                    visibility: hidden;
+                                                                                    padding: 12px 18px;
+                                                                                    border-radius: 6px;
+                                                                                    text-decoration: none;
+                                                                                    width: 80px;
+                                                                                    color: #fff;
+                                                                                    transition: background 0.5s;
+                                                                                    font-family: 'Libre Baskerville', serif;
+                                                                                    align-self: center;
+                                                                                    text-align: center;
+                                                                                    font-size: 12px;
+                                                                                }
+                                                                                .svg-inline--fa.fa-times.fa-w-11 {
+                                                                                    /* display: block; */
+                                                                                    font-size: 25px;
+                                                                                    position: absolute;
+                                                                                    top: 25px;
+                                                                                    left: 25px;
+                                                                                    cursor: pointer;
+                                                                                }
+                                                                                .svg-inline--fa {
+                                                                                    display: block;
+                                                                                }
+                                                                                #header {
+                                                                                    background-image: url(C:\Users\rosej\Desktop\portfolio.rosejethani\lhi.png);
+                                                                                }
+                                                                                .header-text {
+                                                                                    margin-top: 100%;
+                                                                                    font-size: 16px;
+                                                                                }
+                                                                                .header-text h1 {
+                                                                                    font-size: 30px;
+                                                                                }
+                                                                                nav .fas {
+                                                                                    display: block;
+                                                                                    font-size: 25px;
+                                                                                }
+                                                                                nav ul {
+                                                                                    background: #ff044f;
+                                                                                    position: fixed;
+                                                                                    top: 0;
+                                                                                    right: -200px;
+                                                                                    width: 200px;
+                                                                                    height: 100vh;
+                                                                                    padding-top: 50px;
+                                                                                    z-index: 2;
+                                                                                    transition: right 0.5s;
+                                                                                }
+                                                                                nav ul li {
+                                                                                    display: block;
+                                                                                    margin: 25px;
+                                                                                }
+                                                                                nav ul .fas {
+                                                                                    position: absolute;
+                                                                                    top: 25px;
+                                                                                    left: 25px;
+                                                                                    cursor: pointer;
+                                                                                }
+                                                                                .sub-title {
+                                                                                    font-size: 40px;
+                                                                                }
+                                                                                .about-col-1,
+                                                                                .about-col-2 {
+                                                                                    flex-basis: 100%;
+                                                                                }
+                                                                                .row {
+                                                                                    overflow-x: hidden;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media only screen and (max-width: 457px) {
+                                                                                form input,
+                                                                                form textarea {
+                                                                                    width: 31vw;
+                                                                                    margin: 5px 0;
+                                                                                    color: #fff;
+                                                                                    font-size: 12px;
+                                                                                }
+                                                                                .btn.btn2 {
+                                                                                    font-size: 11px;
+                                                                                    margin-left: 1px;
+                                                                                    padding: 7px 0px;
+                                                                                    width: 94px;
+                                                                                    display: flex;
+                                                                                    background-color: #ff004f;
+                                                                                    cursor: pointer;
+                                                                                    position: relative;
+                                                                                    flex-basis: 100%;
+                                                                                    margin-top: 5px;
+                                                                                }
+                                                                                .sub-title {
+                                                                                    font-size: 35px;
+                                                                                }
+                                                                                .contact-left p {
+                                                                                    font-size: 13px;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media only screen and (max-width: 1144px) {
+                                                                                .contact-right,
+                                                                                .contact-left {
+                                                                                    flex-basis: 100%;
+                                                                                    margin-top: 0px;
+                                                                                }
+                                                                                .about-col-2 {
+                                                                                    flex-basis: 49%;
+                                                                                    margin-left: 39px;
+                                                                                }
+                                                                                .about-col-1 {
+                                                                                    flex-basis: 38%;
+                                                                                    margin-left: 2vw;
+                                                                                    overflow-x: visible;
+                                                                                }
+                                                                                .devpic {
+                                                                                    height: 80vh;
+                                                                                    margin-right: -120px;
+                                                                                }
+                                                                                .logo {
+                                                                                    height: 50px;
+                                                                                    margin-left: -14px;
+                                                                                }
+                                                                                nav ul {
+                                                                                    font-size: 3px;
+                                                                                }
+                                                                                nav ul li a {
+                                                                                    font-size: 17px;
+                                                                                }
+                                                                                .hello {
+                                                                                    font-size: 57px;
+                                                                                }
+                                                                                .name {
+                                                                                    font-size: 48px;
+                                                                                    font-weight: 1000;
+                                                                                    color: #ff004f;
+                                                                                }
+                                                                                .about {
+                                                                                    font-size: 25px;
+                                                                                }
+                                                                                .devpic img {
+                                                                                    height: 538px;
+                                                                                    margin-top: 60px;
+                                                                                }
+                                                                                .row {
+                                                                                    overflow-x: visible;
+                                                                                }
+                                                                                /* .infoContainer {
+            height: 60vh;
+        } */
+                                                                                /* #header {
+            background: #080808;
+            color: #fff;
+            padding: 10px 4%;
+        }
+        nav ul li {
+            margin: 9px 12px;
+        } */
+                                                                            }
+                                                                            
+                                                                            @media only screen and (max-width: 896px) {
+                                                                                .about-col-2 {
+                                                                                    flex-basis: 49%;
+                                                                                    margin-left: 11px;
+                                                                                }
+                                                                                .contact-left,
+                                                                                .contact-right {
+                                                                                    flex-basis: 100%;
+                                                                                }
+                                                                                #header {
+                                                                                    background: #080808;
+                                                                                    color: #fff;
+                                                                                    padding: 10px 4%;
+                                                                                }
+                                                                                .nav ul li {
+                                                                                    margin: 9px 12px;
+                                                                                }
+                                                                                .logo {
+                                                                                    height: 40px;
+                                                                                }
+                                                                                nav ul li a {
+                                                                                    font-size: 13px;
+                                                                                }
+                                                                                .about-col-1,
+                                                                                .about-col-2 {
+                                                                                    flex-basis: 100%;
+                                                                                    display: inline;
+                                                                                    width: 100vw;
+                                                                                }
+                                                                                .about-col-1 {
+                                                                                    overflow-x: hidden;
+                                                                                    margin-left: auto;
+                                                                                    margin-right: auto;
+                                                                                    display: flex;
+                                                                                    justify-content: center;
+                                                                                    align-items: center;
+                                                                                }
+                                                                                .about-col-1 img {
+                                                                                    align-self: center;
+                                                                                    display: block;
+                                                                                    /* Ensure the image is a block element */
+                                                                                    max-width: 100%;
+                                                                                    /* Ensure the image does not exceed its container */
+                                                                                    height: auto;
+                                                                                }
+                                                                                .sub-title {
+                                                                                    margin-top: 9vh;
+                                                                                }
+                                                                                .row {
+                                                                                    overflow-x: hidden;
+                                                                                    display: flex;
+                                                                                    justify-content: center;
+                                                                                    align-items: center;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media (max-width: 450px) {
+                                                                                .work img {
+                                                                                    width: 65%;
+                                                                                    /* Adjust the width as needed for smaller screens */
+                                                                                }
+                                                                                .layer {
+                                                                                    width: 65%;
+                                                                                    padding: 0 5%;
+                                                                                    font-size: 6px;
+                                                                                    /* Adjusted padding for smaller screens */
+                                                                                }
+                                                                                .sub-title {
+                                                                                    font-size: 38px;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media only screen and (max-width: 1319px) {
+                                                                                .btn1 {
+                                                                                    visibility: visible;
+                                                                                }
+                                                                                .llm4 {
+                                                                                    display: none;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media only screen and (max-width: 1029px) {
+                                                                                .llm3,
+                                                                                .llm2 {
+                                                                                    display: none;
+                                                                                }
+                                                                            }
+                                                                            
+                                                                            @media only screen and (max-width: 739px) {
+                                                                                .llm1 {
+                                                                                    display: none;
+                                                                                }
+                                                                            }
